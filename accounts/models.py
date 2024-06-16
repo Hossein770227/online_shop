@@ -38,3 +38,17 @@ class MyUser(AbstractBaseUser):
     @property
     def is_superuser(self):
         return True
+    
+    
+class OtpCode(models.Model):
+    phone_number = models.CharField(max_length=11)
+    code = models.PositiveSmallIntegerField()
+    date_time_created = models.DateTimeField(auto_now_add=timezone.now())
+
+    class Meta:
+        verbose_name = _('otp code')
+        verbose_name_plural = _('otp code')
+
+
+    def __str__(self):
+        return f'{self.phone_number}:{self.code}'

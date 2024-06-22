@@ -72,11 +72,11 @@ class UserRegisterCodeView(View):
                 code_instance.delete()
                 messages.success(request, _('you register'))
                 login(request, user)
-                return redirect('pages:home')
+                return redirect('products:product_list')
             else:
                 messages.error(request, _('this code is wrong'))
                 return redirect('accounts:verify_code')
-        return redirect('pages:home')
+        return redirect('products:product_list')
     
 
 
@@ -107,7 +107,7 @@ def password_change_view(request):
             form.save()
             update_session_auth_hash(request,form.user)
             messages.success(request, _('your password sucessfully changed'))
-            return redirect('pages:home')
+            return redirect('products:product_list')
         return redirect('accounts:change_password')
     else:
         form = PasswordChangeForm(user=request.user)

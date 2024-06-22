@@ -5,6 +5,6 @@ from .models import Prouduct
 
 class ProductListView(ListView):
     model = Prouduct
-    template_name = 'product_list.html'
+    template_name = 'products/product_list.html'
     context_object_name = 'products'
 

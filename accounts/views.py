@@ -95,7 +95,7 @@ def login_view(request):
 def logout_view(request):
     if request.method =='POST':
         logout(request)
-        messages.error(request, _('you successfully logouted'))
+        messages.error(request, _('you successfully log outed'))
         return redirect('products:product_list')
 
 # password change

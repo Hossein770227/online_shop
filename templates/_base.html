@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+{% load i18n %}
 <html  class="no-js">
 
 <head>
@@ -56,8 +57,8 @@
                                 <div class="mainmenu-nav d-none d-lg-block w-100 pr-3">
                                     <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                         <li class="mainmenu__item menu-item-has-children active">
-                                            <a href="index.html" class="mainmenu__link">
-                                                <span class="mm-text">خانه</span>
+                                            <a href="{% url "products:product_list" %}" class="mainmenu__link">
+                                                <span class="mm-text">{% trans "home" %}</span>
                                             </a>
                                         </li>
                                         <li class="mainmenu__item menu-item-has-children">
@@ -97,18 +98,25 @@
                                         <i class="flaticon flaticon-user"></i>
                                     </a>
                                     <ul class="user-info-menu">
-                                        <li>
-                                            <a class="text-right" href="my-account.html">حساب کاربری</a>
-                                        </li>
-                                        <li>
-                                            <a class="text-right" href="cart.html">سبد خرید</a>
-                                        </li>
-                                        <li>
-                                            <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
-                                        </li>
-                                        <li>
-                                            <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
-                                        </li>
+                                        {% if user.is_authenticated %}
+                                            <li>
+                                                <a class="text-right" href="my-account.html">{% trans "profile" %}</a>
+                                            </li>
+                                            <li>
+                                                <form action="{% url 'accounts:logout' %}" method="POST">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class='btn'>{% trans "log out" %}</button>
+                                                </form>
+                                                {% comment %} <a class="text-right" href="{% url "accounts:logout" %}">{% trans "logout" %}</a> {% endcomment %}
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a class="text-right" href="{% url "accounts:login" %}">{% trans "login" %} </a>
+                                            </li>
+                                            <li>
+                                                <a class="text-right" href="{% url "accounts:user_register" %}">{% trans "sigin up" %}</a>
+                                            </li>
+                                        {% endif %}
                                     </ul>
                                 </li>
                                 <li class="header-toolbar__item">

@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     # my app
     'accounts',
     'pages',
-    'products',
+    'my_products',
 
     # third party apps
     'crispy_forms',
@@ -144,6 +144,10 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+# media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

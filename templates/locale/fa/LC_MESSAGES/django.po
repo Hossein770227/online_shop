@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 13:52+0330\n"
-"PO-Revision-Date: 2024-06-22 13:53+0330\n"
+"POT-Creation-Date: 2024-06-23 14:10+0330\n"
+"PO-Revision-Date: 2024-06-23 14:11+0330\n"
 "Last-Translator: Anonymous User <anonymous@user.tld>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\_base.html:62
+msgid "home"
+msgstr "صفحه اصلی "
+
+#: .\_base.html:104
+msgid "profile"
+msgstr "پروفایل"
+
+#: .\_base.html:109
+#| msgid "log in"
+msgid "log out"
+msgstr "خروج"
+
+#: .\_base.html:116
+msgid "login"
+msgstr "ورود"
+
+#: .\_base.html:119
+#| msgid "sign up"
+msgid "sigin up"
+msgstr "ثبت نام "
 
 #: .\registration\login.html:4 .\registration\login.html:15
 #: .\registration\login.html:30 .\registration\login.html:35

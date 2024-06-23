@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-23 14:04+0330\n"
+"PO-Revision-Date: 2024-06-23 14:09+0330\n"
+"Last-Translator: Anonymous User <anonymous@user.tld>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\forms.py:39 .\models.py:10
+msgid "phone number"
+msgstr "شماره همراه"
+
+#: .\forms.py:40 .\models.py:11
+msgid "full name"
+msgstr "نام کامل "
+
+#: .\forms.py:41
+msgid "password"
+msgstr "گذرواژه"
+
+#: .\forms.py:42
+msgid "confirm password"
+msgstr "تایید گذرواژه"
+
+#: .\forms.py:49
+msgid "This phone number already exists"
+msgstr "این شماره از قبل وجود دارد"
+
+#: .\forms.py:55
+msgid "passwords dont match"
+msgstr "گذرواژه مطابقت ندارد"
+
+#: .\models.py:16 .\models.py:17
+msgid "my users"
+msgstr "مخاطبین"
+
+#: .\models.py:49 .\models.py:50
+msgid "otp code"
+msgstr ""
+
+#: .\views.py:30
+msgid "we send your code alreedy"
+msgstr "کد تایید از قبل ارسال شده "
+
+#: .\views.py:40
+msgid "we sent you a code"
+msgstr "کد تایید ارسال شد."
+
+#: .\views.py:63 .\views.py:67
+msgid "your code time is out"
+msgstr ""
+
+#: .\views.py:73
+msgid "you register"
+msgstr ""
+
+#: .\views.py:77
+msgid "this code is wrong"
+msgstr ""
+
+#: .\views.py:89
+msgid "you successfully login"
+msgstr ""
+
+#: .\views.py:98
+msgid "you successfully log outed"
+msgstr ""
+
+#: .\views.py:109
+msgid "your password sucessfully changed"
+msgstr ""

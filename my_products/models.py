@@ -29,11 +29,11 @@ class Product(models.Model):
 
 class Comment(models.Model):
     STARS_CHOICES = [
-        (1 , _("very bad")),
-        (2 , _(" bad")),
-        (3 , _("normal")),
-        (4 , _("good")),
-        (5 , _("prefect")),
+        ('1' , _("very bad")),
+        ('2' , _(" bad")),
+        ('3' , _("normal")),
+        ('4' , _("good")),
+        ('5' , _("prefect")),
     ]
 
     author = models.ForeignKey(get_user_model(), verbose_name=_(""), on_delete=models.CASCADE)

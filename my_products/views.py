@@ -19,11 +19,17 @@ def product_detail(request, pk):
          new_comment =comment_form.save(commit= False)
          new_comment.product = product
          new_comment.author = request.user
-         new_comment.sav()
+         new_comment.save()
          comment_form= CommentForm()
 
    else:
       comment_form = CommentForm()
-   return render(request, 'my_products/product_detail.html',{'product':product, 'comment_form':comment_form})
+   return render(
+      request, 
+      'my_products/product_detail.html',
+      {'product':product, 
+       'comments':comments, 
+       'comment_form':comment_form},
+      )
 
 
